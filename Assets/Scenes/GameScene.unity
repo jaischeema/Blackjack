@@ -451,7 +451,6 @@ GameObject:
   - component: {fileID: 756873490}
   - component: {fileID: 756873489}
   - component: {fileID: 756873488}
-  - component: {fileID: 756873492}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -535,6 +534,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 441997294}
+  - {fileID: 1777514018}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -542,20 +542,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &756873492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 756873487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 227de690359394bb7adf9c604d83a1ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerHandPrefab: {fileID: 5423898636691699871, guid: 64211833513ff4f439c6457698c43a9e, type: 3}
-  HandsContainer: {fileID: 809187818}
 --- !u!1 &770575915
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,7 +625,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 756873492}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
         m_MethodName: OnStandButton
         m_Mode: 1
@@ -830,6 +816,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1718046669}
   m_CullTransparentMesh: 0
+--- !u!1 &1777514017
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1777514018}
+  - component: {fileID: 1777514019}
+  m_Layer: 5
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1777514018
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777514017}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 756873491}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1777514019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777514017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227de690359394bb7adf9c604d83a1ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerHandPrefab: {fileID: 5423898636691699871, guid: 64211833513ff4f439c6457698c43a9e, type: 3}
+  HandsContainer: {fileID: 809187818}
 --- !u!1 &1903934115
 GameObject:
   m_ObjectHideFlags: 0
@@ -913,7 +949,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 756873492}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
         m_MethodName: OnHitButton
         m_Mode: 1

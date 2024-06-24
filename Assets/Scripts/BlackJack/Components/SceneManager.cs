@@ -8,14 +8,26 @@ public class SceneManager : MonoBehaviour
     public GameObject PlayerHandPrefab;
     public GameObject HandsContainer;
     private Game _game;
-    
+
+    public Game Game => _game;
+
     private PlayerHand _dealer;
-    private List<PlayerHand> _playerHands;
-    
+    private List<PlayerHand> _playerHands = new();
+
+    private void Start()
+    {
+        Reset();
+    }
+
     // Start is called before the first frame update
-    void Start()
+    public void Reset()
     {
         _game = new Game(3);
+        
+        foreach(Transform child in HandsContainer.transform)
+        {
+            Destroy(child.gameObject);
+        }
         
         var dealerGameObject = Instantiate(PlayerHandPrefab, Vector3.zero, Quaternion.identity);
         dealerGameObject.transform.SetParent(HandsContainer.transform);
